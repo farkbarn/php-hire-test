@@ -1,0 +1,19 @@
+{
+    "name": "JarcDevelop/php-hire-test",
+    "description": "PHP Hire Test",
+    "license": "CC-BY-4.0",
+    "authors": [
+        {
+            "name": "JarcDevelop",
+            "email": "hello@jarcodallo.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.0",
+        "monolog/monolog": "1.*",
+        "slim/slim": "2.*",
+        "slim/views": "0.*",
+        "twig/twig": "1.*"
+    }
+}
