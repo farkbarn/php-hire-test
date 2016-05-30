@@ -4,7 +4,7 @@
 Our open spot is for **web development**, mainly PHP 5.3+ for backend and JavaScript / CSS / HTML for the client-side. Looks like a piece of cake at first (if you're the one), but it can be tricky (and satisfying) at the same time!
 
 ### Why is it written in english?
-Because **english is a must nowadays for software development**. You may find specs and material in our native language (brazilian portuguese), but don't expect to find a translated version of functions and variables of the source code of your preferred tool or framework. This is highly unlikely ... Seriously.
+Because **english is a must nowadays for software development**. You may find specs and material in our native language (Spanish Latin American), but don't expect to find a translated version of functions and variables of the source code of your preferred tool or framework. This is highly unlikely ... Seriously.
 
 # Goal
 Create a contact form based on the Adobe Photoshop _contact.psd_ file available in this repository, using it to guide how it shoud look. If you don't have access to Adobe Photoshop, you can simply use GIMP (like I did). You should use the following frameworks and resources:
