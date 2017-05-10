@@ -1,5 +1,6 @@
 
 /* colors */
+@colorbk: #6d6d6d;
 @colorbg: #FFFFFF;
 @color2: #76c7c0;
 @color3: #ececec;
@@ -7,6 +8,7 @@
 @color5: #1F978D;
 @color6: #F7F7F7;
 @colorbtn1: #e75e55;
+@colorContactus:#a3abab;
 
 /* clases */
 .color1{background-color: @colorbg;}
@@ -15,9 +17,21 @@
 .color4{background-color: @color4;}
 .color6{background-color: @color6;}
 
+/* mixin */
+.mix_borrad (@valor){
+  -webkit-border-radius: @valor;
+  -moz-border-radius: @valor;
+  -ms-border-radius: @valor;
+  -o-border-radius: @valor;
+  border-radius: @valor;
+}
+
+
 /* bootstrap custom*/
 .container-fluid{padding: 0;}
 .nav-pills>li.active>a{background: @color5 !important;}
+.breadcrumb{background-color: initial; padding-top: 0px !important;}
+
 
 html{background-color: @colorbg;font-size: 10px;}
 
@@ -45,10 +59,20 @@ body{
 			div.marlefrig{padding: 0.5rem 10%;}
 		}
 	}
-	main{
-		section{}
-		.breac{height: 8rem;}
-		.cont{}
+	main{margin: 0 5%;
+		section{height: 8rem;color: @colorContactus;
+			div{padding: 2% 5%;
+				a{color:inherit;font-size: 1.5rem;text-transform: capitalize;}
+			}
+			.contacts{font-size: 3rem;text-transform: uppercase;padding-top: 1.5%; color: inherit;}
+		}
+		.breac{padding: 0 11%;}
+		.cont{padding: 0 11%;height: auto;
+			iframe{margin:6.4rem 0;}
+			p{padding: 2%; .mix_borrad(1rem);color: @colorbk; text-align: justify;
+			
+			}
+		}
 	}
 	footer{}
 }
