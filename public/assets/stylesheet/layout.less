@@ -8,6 +8,7 @@
 @color5: #1F978D;
 @color6: #F7F7F7;
 @colorbtn1: #e75e55;
+@colorbtn2: #EC3327;
 @colorContactus:#a3abab;
 
 /* clases */
@@ -60,20 +61,36 @@ body{
 		}
 	}
 	main{margin: 0 5%;
-		section{height: 8rem;color: @colorContactus;
+		section{color: @colorContactus;
 			div{padding: 2% 5%;
 				a{color:inherit;font-size: 1.5rem;text-transform: capitalize;}
 			}
 			.contacts{font-size: 3rem;text-transform: uppercase;padding-top: 1.5%; color: inherit;}
 		}
-		.breac{padding: 0 11%;}
+		.breac{padding: 0 11%;height: 8rem;}
 		.cont{padding: 0 11%;height: auto;
 			iframe{margin:6.4rem 0;}
 			p{padding: 2%; .mix_borrad(1rem);color: @colorbk; text-align: justify;}
 		}
-		.contform{padding: 0 11%;
-			
+		.contform{padding: 6rem 11%;height: auto;
+			.form{
+				form{
+					.sendinquiry{text-transform: uppercase; color: @colorContactus;font-weight: bold;padding-left: 2rem;margin-bottom: 3rem;}
+					div{padding-left: 1rem;}
+					}
+				}
+			}
+			.contact{
+				.address{text-transform: uppercase; color: @colorContactus;font-weight: bold;padding-left: 15rem;margin-bottom: 3rem;}
+				section{
+					.ulcont{
+						li{list-style-type: none;line-height: 4rem; padding-left: 10rem;
+							a{color:@colorbtn2;text-decoration: underline;}
+							img{margin-right: 1rem;}
+						}
+					}
+				}
+			}
 		}
-	}
 	footer{}
 }
