@@ -55,9 +55,10 @@
 			</div>
 		</section>
 		<!-- contenido -->
-		<section class="cont color6 container-fluid ">
-			<iframe width="100%" height="535" frameborder="0" style="border:1" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAikJRQ80Je0glogMVoaN09HObA6EkBpL4&q=Barquisimeto+Parque Ayacucho" allowfullscreen>
-			</iframe>
+		<section class="cont color6 container-fluid ">			
+			
+			<div id="map"></div>
+
 			<p class="color3 mix_borrad">
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</p>
@@ -135,7 +136,34 @@
 			</section>
 		</section>
 	</footer>
+	
+	<script src="assets/jquery/jquery.min.js"></script><!-- jquery -->
+    <script src="assets/js/bootstrap.min.js"></script><!-- bootstrap -->
+    <!-- script map -->
+    <script>
+    var map;
 
-    <script src="assets/js/bootstrap.min.js"></script>
+	function initMap() {
+		var myLatLng = {lat: 10.0611788, lng: -69.3397187};
+		var map = new google.maps.Map(document.getElementById('map'), {
+			center: myLatLng,
+			scrollwheel: false,
+			zoom: 20
+		});
+		var marker = new google.maps.Marker({
+			map: map,
+			position: myLatLng,
+			title: 'Google Plex'
+		});
+	}
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAikJRQ80Je0glogMVoaN09HObA6EkBpL4&callback=initMap" async defer></script>
+
+    <script>
+    	
+    </script>
+
+
 </body>
 </html>
