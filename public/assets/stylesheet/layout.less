@@ -34,13 +34,13 @@
 .breadcrumb{background-color: initial; padding-top: 0px !important;}
 
 
-html{background-color: @colorbg;font-size: 10px;}
+html{background-color: @colorbg;}
 
 head{
 	title{}
 }
 
-body{
+body{font-size: 14px;
 	header{height: 8rem;
 		nav{height:inherit;color: @colorbg !important;padding-top: 1.5rem !important;
 			div{
@@ -76,7 +76,12 @@ body{
 			.form{
 				form{
 					.sendinquiry{text-transform: uppercase; color: @colorContactus;font-weight: bold;padding-left: 2rem;margin-bottom: 3rem;}
-					div{padding-left: 1rem;}
+					div{padding-left: 1rem;
+						div{
+							input{.mix_borrad(1rem);}
+						}
+						.btnsubmit{width: 20rem;padding: 1rem;text-transform: uppercase;}
+						}
 					}
 				}
 			}
