@@ -26,13 +26,34 @@
   border-radius: @valor;
 }
 
-
 /* bootstrap custom*/
 .container-fluid{padding: 0;}
 .nav-pills>li.active>a{background: @color5 !important;}
 .breadcrumb{background-color: initial; padding-top: 0px !important;}
 label{padding-top: 2rem !important;}
 
+/* css error form */
+.error{
+	background-color: @colorbtn2;
+	padding: 0.4rem 0.9rem;
+	border-radius: 0.3rem;
+	color: @colorbg;
+	font-weight: bold;
+	margin-left: 1rem;
+	margin-top: 0.5rem;
+	position: relative;
+	float: right;
+}
+.error:before{
+	content: '';
+	border-top: 0.5rem solid transparent;
+	border-bottom: 0.5rem solid transparent;
+	border-right: 0.5rem solid @colorbtn2;
+	border-left: 0.5rem solid transparent;
+	left: -1rem;
+	position: absolute;
+	top: 0.3rem;
+}
 
 html{background-color: @colorbg;}
 
@@ -74,12 +95,15 @@ body{font-size: 14px;
 		}
 		.contform{padding: 6rem 11% 20rem;height: auto;
 			.form{
+				section{
+					#ok{font-size: 2rem;}
+				}
 				form{
 					.sendinquiry{text-transform: uppercase; color: @colorContactus;font-weight: bold;padding-left: 2rem;margin-bottom: 3rem;}
 					div{padding-left: 1rem;
-						textarea{background-color: @color3 !important;}
+						textarea{background-color: @color3 !important;border: none;color: @colorbk;font-size: 2rem;}
 						div{
-							input{.mix_borrad(0.5rem);border:none;background-color: @color3 !important;}
+							input{.mix_borrad(0.5rem);border:none;background-color: @color3 !important;color: @colorbk; font-size: 2rem;}
 						}
 						.btnsubmit{width: 20rem;padding: 1rem;text-transform: uppercase;
 							background-image:none;background-color: @colorbtn1;border-bottom: @colorbtn1;border-color: @colorbtn1;
