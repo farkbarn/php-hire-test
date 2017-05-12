@@ -68,36 +68,37 @@
 			<!-- contform -->
 			<section class="form col-md-7">
 				<!-- form -->
-				<form action="#" method="post" accept-charset="utf-8">
+				<section><p id="ok"></p></section><!-- send -->
+				<form id="formsendmail" accept-charset="utf-8">
 					<section class="sendinquiry">send inquiry</section>
 					<!-- name -->				
 					<div class="form-group row col-md-10">
 						<div class="col-md-10">
-							<input class="form-control" type="text" value="" id="name">
+							<input class="form-control" type="text" name="name" value="" id="name">
 						</div>
 						<label for="" class="name col-md-2  col-form-label">name</label>
 					</div>
 					<!-- email -->				
 					<div class="form-group row col-md-10">
 						<div class="col-md-10">
-							<input class="form-control" type="text" value="" id="email">
+							<input class="form-control" type="text" name="email" value="" id="email">
 						</div>
-						<label for="" class="name col-md-2  col-form-label">e-mail</label>
+						<label for="" class="email col-md-2  col-form-label">e-mail</label>
 					</div>
 					<!-- website -->				
 					<div class="form-group row col-md-10">
 						<div class="col-md-10">
-							<input class="form-control" type="text" value="" id="website">
+							<input class="form-control" type="text" name="website" value="" id="website">
 						</div>
-						<label for="" class="name col-md-2  col-form-label">web site</label>
+						<label for="" class="webiste col-md-2  col-form-label">web site</label>
 					</div>
 					<!-- comment -->
 					<div class="col-md-10">
-						<textarea name="" id="textarea" cols="90%" rows="10"></textarea>
+						<textarea name="" class="textarea" cols="90%" rows="10" name="textarea" id="textarea"></textarea>
 					</div>
 					<!-- submit -->
 					<div class="col-md-10">
-						<input  type="submit" class="btnsubmit btn btn-primary" value="send">
+						<button type="submit" id="btnsendmail" class="btnsubmit btn btn-danger">SEND</button>
 					</div>
 				</form>
 			</section>
@@ -108,7 +109,7 @@
 					<ul class="ulcont">
 						<li><img src="assets/images/gps.png" alt="">Lorem ipsum dolor sit amet, ipsum</li>
 						<li><img src="assets/images/phone.png" alt=""> 111 5698 5689</li>
-						<li><img src="assets/images/email.png" alt=""> <a href="#">modus@versus.com</a>  </li>
+						<li><img src="assets/images/email.png" alt=""> <a href="mailto:modus@versus.com?subject=feedback">modus@versus.com</a>  </li>
 					</ul>
 				</section>
 			</section>
@@ -136,13 +137,13 @@
 			</section>
 		</section>
 	</footer>
-	
 	<script src="assets/jquery/jquery.min.js"></script><!-- jquery -->
+	<script src="assets/js/actions.js"></script>
     <script src="assets/js/bootstrap.min.js"></script><!-- bootstrap -->
+    <script src="assets/js/jquery.validate.min.js"></script> <!-- validator bst -->
     <!-- script map -->
     <script>
     var map;
-
 	function initMap() {
 		var myLatLng = {lat: 10.0611788, lng: -69.3397187};
 		var map = new google.maps.Map(document.getElementById('map'), {
@@ -157,7 +158,6 @@
 		});
 	}
     </script>
-
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAikJRQ80Je0glogMVoaN09HObA6EkBpL4&callback=initMap" async defer></script>
 
     <script>
