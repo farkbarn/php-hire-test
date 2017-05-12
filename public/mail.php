@@ -5,8 +5,9 @@ if (file_exists('../vendor/phpmailer/phpmailer/PHPMailerAutoload.php')) {
 /**
  * function mail
  **/
-function send_mail()
+function send_mail($name,$email,$website,$textarea)
 {
+	return $name.$email.$website.$textarea.PHP_EOL;
 	$smail=new PHPMailer;
 	/*parameters*/
 	$smail->isSMTP();
