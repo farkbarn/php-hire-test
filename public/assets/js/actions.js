@@ -15,12 +15,17 @@ $("#formsendmail").validate({
             textarea : "El mensaje es muy corto, sientase libre de escribirnos",
         },
         submitHandler: function(form){
-            var dataString = 'name='+$('#name').val()+'&email='+$('#email').val()+'&website='+$('#website').val()+'&textarea='+$('#textarea').val()+'...';
+            //var dataString = 'name='+$('#name').val()+'&email='+$('#email').val()+'&website='+$('#website').val()+'&textarea='+$('#textarea').val()+'...';
+            var datos={name:$('#name').val(),email:$('#email').val(),website:$('#website').val(),textarea:$('#textarea').val()}
+
             $.ajax({
                 type: "POST",
                 url:"../send.php",
-                data: dataString,
+                //data: dataString,
+                data: datos,
+                //dataType: "json",
                 success: function(data){
+                	console.log(data);
                     $("#ok").html(data);
                     $("#ok").show();
                     $("#formsendmail").hide('slow/800/fast', function() {});;
