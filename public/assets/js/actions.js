@@ -1,7 +1,6 @@
 jQuery(document).ready(function($) {
 	$('#ok').hide('slow/400/fast', function() {});
 
-
 $("#formsendmail").validate({
         rules: {
             name: { required: true, minlength: 3},
@@ -16,15 +15,16 @@ $("#formsendmail").validate({
             textarea : "El mensaje es muy corto, sientase libre de escribirnos",
         },
         submitHandler: function(form){
-            var dat=$.parseJSON('{"name":"'+$('#name').val()+'","email":"'+$('#email').val()+'","website":"'+$('#website').val()+'","textarea":"'+$('#textarea').val()+'"}');
-            //console.log(name,email,website,textarea); // test
+            var dat=$("#formsendmail").serializeArray();
             $.ajax({
                 type: "POST",
                 url:"../send.php",
                 data: dat,
-                //dataType: "JSON",
+                //data: JSON.stringify(dat),
+                ////dataType: "json",
                 success: function(data){
-                	console.log(data);
+                	//console.log(data);
+                	//console.log(dat);
                     $("#ok").html(data);
                     $("#ok").show();
                     $("#formsendmail").hide('slow/800/fast', function() {});;
@@ -32,6 +32,9 @@ $("#formsendmail").validate({
             });
         }
     });
+$("#btnsendmail").click(function(event) {
+	$("#btnsendmail").hide('slow/40/fast', function() {});
+});
 
 
 });

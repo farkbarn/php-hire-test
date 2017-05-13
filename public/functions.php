@@ -8,6 +8,7 @@ class validarphp
 	protected $email;
 	protected $website;
 	protected $textarea;
+	protected $val;
 	
 	public function __construct($name,$email,$website,$textarea)
 	{
@@ -17,7 +18,7 @@ class validarphp
 		$this->textarea=$textarea;
 	}
 
-	public function validar(/*$name,$email,$website = NULL,$textarea*/)
+	public function validar()
 	{
 		$muestra= "/[A-Z,a-zñÑáéíóúÁÉÍÓÚÄËÏÖÜäëïöüàèìòùÀÈÌÔÙ, ]{3,}$/";//NO IMPORTA SI EL NOMBRE ESTA ESCRITO
 		                                                          //CON INICIAL MINUSCULA ADD (/^[A-Z] en caso contrario)
@@ -33,37 +34,10 @@ class validarphp
 
 	}
 
-	/*public function __toString()()
-	{
-		return
-			echo $this->$val.PHP_EOL;
-	}*/
-
-
-
-
-/*
-if (
-	
-	(preg_match($muestra,$this->name))&&
-	(filter_var($this->email,FILTER_VALIDATE_EMAIL))&&
-	(filter_var($this->website,FILTER_VALIDATE_URL))&&
-	(preg_match($muestra,$this->textarea))&&
-	
-	)
-		{return true;}
-	else
-		{return false;}
-*/
-
-/**/
-//if ( (preg_match($muestra,$this->name))&&(filter_var($this->email,FILTER_VALIDATE_EMAIL))&&(filter_var($this->website,FILTER_VALIDATE_URL))&&(preg_match($muestra,$this->textarea))	){echo 1;}else{echo 0;}
-/**/
-//if ( () && (( (preg_match($muestra,"frank"))))       )     {echo 1;}else{echo 0;}
-//if ( (preg_match($muestra,"ana"))&&(filter_var("frank@gmail.com",FILTER_VALIDATE_EMAIL))&&(filter_var("http://google.com",FILTER_VALIDATE_URL))&&(preg_match($muestra,"casa"))){echo 1;}else{echo 0;}
-/**/
-
-
+	public function name(){return $this->name.PHP_EOL;}
+	public function email(){return $this->email.PHP_EOL;}
+	public function website(){return $this->website.PHP_EOL;}
+	public function comment(){return $this->textarea.PHP_EOL;}
 
 }
 

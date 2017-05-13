@@ -7,24 +7,24 @@ if (file_exists('../vendor/phpmailer/phpmailer/PHPMailerAutoload.php')) {
  **/
 function send_mail($name,$email,$website,$textarea)
 {
-	return $name.$email.$website.$textarea.PHP_EOL;
+	//return $name.$email.$website.$textarea.PHP_EOL;
 	$smail=new PHPMailer;
 	/*parameters*/
 	$smail->isSMTP();
-	$smail->Host='smtp.gmail.com';
+	$smail->Host='smtp.mailgun.org';
 	$smail->SMTPAuth=true;
-	$smail->Username='user@server.dom';
-	$smail->Password='nopi-nopi';
+	$smail->Username='php_hire_test@mg.farkbarn.com.ve';
+	$smail->Password='notiene';
 	$smail->SMTPSecure='tls';
 	$smail->Port=587;
 	/**/
-	$smail->setFrom('from@server.dom', 'email');
-	$smail->addAddress('to@server.dom','test');
-	$smail->addReplyTo('from@server.dom',null);
+	$smail->setFrom('php_hire_test@mg.farkbarn.com.ve', 'comment');
+	$smail->addAddress('frankbarrerag@gmail.com','php-hire-test');
+	$smail->addReplyTo($email,null);
 	$smail->isHTML(true);
 	/**/
-	$smail->Subject='txt';
-	$smail->Body='body';
+	$smail->Subject='comment php-hire-test from:'.$name;
+	$smail->Body=$name.PHP_EOL.$website.PHP_EOL.$textarea.PHP_EOL;
 	$smail->AltBody='txt plain';
 	/**/
 	if (!$smail->send()) {
