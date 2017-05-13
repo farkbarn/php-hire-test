@@ -33,8 +33,6 @@ function send_mail($name,$email,$website,$textarea)
 	} else {
 		echo "yes! send :) RockAndRoll".PHP_EOL;
 	}
-
-
 }
 
 ?>

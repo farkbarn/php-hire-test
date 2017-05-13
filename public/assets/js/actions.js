@@ -6,24 +6,23 @@ $("#formsendmail").validate({
         rules: {
             name: { required: true, minlength: 3},
             email: { required:true, email: true},
-            website: { required: false},
-            textarea: { required:true, minlength: 2}
+            website: { required: true, url:true},
+            textarea: { required:true, minlength: 3},
         },
         messages: {
-            name: "Debe introducir su nombre.",
-            email: "Debe introducir su email correctamente.",
+            name: "Segur@ es tu nombre?.",
+            email: "Debes introducir su email correctamente.",
+            website: "La Url es necesaria :)",
             textarea : "El mensaje es muy corto, sientase libre de escribirnos",
         },
         submitHandler: function(form){
-            //var dataString = 'name='+$('#name').val()+'&email='+$('#email').val()+'&website='+$('#website').val()+'&textarea='+$('#textarea').val()+'...';
-            var datos={name:$('#name').val(),email:$('#email').val(),website:$('#website').val(),textarea:$('#textarea').val()}
-
+            var dat=$.parseJSON('{"name":"'+$('#name').val()+'","email":"'+$('#email').val()+'","website":"'+$('#website').val()+'","textarea":"'+$('#textarea').val()+'"}');
+            //console.log(name,email,website,textarea); // test
             $.ajax({
                 type: "POST",
                 url:"../send.php",
-                //data: dataString,
-                data: datos,
-                //dataType: "json",
+                data: dat,
+                //dataType: "JSON",
                 success: function(data){
                 	console.log(data);
                     $("#ok").html(data);
@@ -33,7 +32,6 @@ $("#formsendmail").validate({
             });
         }
     });
-
 
 
 });
