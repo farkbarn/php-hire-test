@@ -55,7 +55,9 @@ label{padding-top: 2rem !important;}
 	top: 0.3rem;
 }
 
-html{background-color: @colorbg;}
+html{background-color: @colorbg; }
+
+ul{list-style: none;}
 
 head{
 	title{}
@@ -124,10 +126,39 @@ body{font-size: 14px;
 				}
 			}
 		}
-	footer{
-		section{}
+	footer{color: @colorbg;
+		section{
+			section{
+				h5{padding-top: 1rem;font-size: 2rem;
+					span{font-weight: bold;text-transform: uppercase;}
+				}
+				ul{
+					li{ clear: both;
+						p{
+						}
+						.fecha{color:@colorbk;font-weight: bold;font-size: 1.5rem;
+						}
+					}
+				}
+				section{
+					h5{text-transform: capitalize;color: @colorbk;font-weight: bold;font-size: 2rem;padding-top: 1rem;}
+					ul{list-style-type: none;
+						li{text-transform: capitalize;line-height: 2.5rem;}
+					}
+				}
+			}
+		}
 		.foot1{height: 28.5rem;padding: 0 11%;
-			section{}
+			section{
+				h3{text-transform: lowercase;
+					strong{margin-right: 0.5rem;text-transform: uppercase;}
+				}
+				p{line-height: 2rem;
+					span{font-size: 2rem;font-weight: bold;
+					}
+				}
+				.contact{line-height: 2rem;padding-top: 2rem;}
+			}
 		}
 		.foot2{height: 4.5rem;padding: 0 11%;
 			.credits{color: @colorbg;line-height: 4.5rem;}
