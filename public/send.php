@@ -5,9 +5,9 @@
 /*obj validar*/
 	$validarphp = new validarphp ($_POST['name'], $_POST['email'], $_POST['website'] , $_POST['textarea']);
 /*send email*/
-	if ($validarphp->validar()) {
-		$validarphp->SetDB();
-		send_mail( $_POST['name'], $_POST['email'], $_POST['website'] , $_POST['textarea']);
+	if ($validarphp->validar())/*validardatos*/ {
+		$validarphp->ConnectionSet();///conecta y almacenar en db
+		send_mail( $_POST['name'], $_POST['email'], $_POST['website'] , $_POST['textarea']);//enviar email
 		//return 'Gracias '.$_POST['name'].'. La información ha sido enviada correctamente!';
 	} else {
 		echo "ups! no hemos podido enviar el mensaje";

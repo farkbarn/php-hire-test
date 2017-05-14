@@ -32,9 +32,9 @@ $("#formsendmail").validate({
             });
         }
     });
-/*$("#btnsendmail").click(function(event) {
+$("#btnsendmail").click(function(event) {
 	$("#btnsendmail").hide('slow/40/fast', function() {});
-});*/
+});
 
 
 });
