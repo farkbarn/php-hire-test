@@ -28,10 +28,10 @@ function send_mail($name,$email,$website,$textarea)
 	$smail->AltBody='txt plain';
 	/**/
 	if (!$smail->send()) {
-		echo "no send".PHP_EOL;
+		echo "no Sent".PHP_EOL;
 		echo "error: ".$smail->ErrorInfo.PHP_EOL;
 	} else {
-		echo "yes! send :) RockAndRoll".PHP_EOL;
+		echo "yes! Sent :) RockAndRoll".PHP_EOL;
 	}
 }
 
